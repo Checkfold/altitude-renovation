@@ -69,9 +69,10 @@ export type HeaderMenuBlock = {
 export type HeroBlock = {
   __component: "blocks.hero";
   background?: StrapiMediaField;
+  exp?: string;
   title?: string;
   description?: string;
-  subtitle?: StrapiTextNode[];
+  subtitle?: string | StrapiTextNode[];
   primaryButtonText?: string;
   primaryButtonLink?: string;
   btnText?: string;

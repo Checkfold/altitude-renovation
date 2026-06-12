@@ -2,6 +2,7 @@ import type {
   HeroBlock as HeroBlockType,
   StrapiMediaField,
 } from "@/types/strapi";
+import Link from "next/link";
 
 type HeroBlockProps = {
   block: HeroBlockType;
@@ -36,6 +37,14 @@ export default function HeroBlock({ block }: HeroBlockProps) {
   const fallbackBackground =
     typeof block.backgroundImageUrl === "string" ? block.backgroundImageUrl : null;
   const heroBackground = backgroundUrl || fallbackBackground;
+  const exp = block.exp?.trim() || "";
+  const title = block.title?.trim() || "";
+  const subtitle =
+    typeof block.subtitle === "string"
+      ? block.subtitle.trim()
+      : "";
+  const buttonText = block.btnText?.trim() || "";
+  const buttonHref = block.btnHref?.trim() || "/";
 
   const sectionStyle = heroBackground
     ? {
@@ -47,5 +56,18 @@ export default function HeroBlock({ block }: HeroBlockProps) {
         background: "#e5e7eb",
       };
 
-  return <section className="heroSection" style={sectionStyle} aria-label="Hero background" />;
+  return (
+    <section className="heroSection" style={sectionStyle} aria-label="Hero background">
+      <div className="container heroContent">
+        {exp && <p className="heroExp">{exp}</p>}
+        {title && <h1 className="heroTitle">{title}</h1>}
+        {subtitle && <p className="heroSubtitle">{subtitle}</p>}
+        {buttonText && (
+          <Link href={buttonHref} className="heroCtaButton">
+            {buttonText}
+          </Link>
+        )}
+      </div>
+    </section>
+  );
 }

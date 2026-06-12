@@ -80,6 +80,11 @@ export interface BlocksHero extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
+    btnHref: Schema.Attribute.String & Schema.Attribute.Required;
+    btnText: Schema.Attribute.String & Schema.Attribute.Required;
+    exp: Schema.Attribute.Text & Schema.Attribute.Required;
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 

@@ -15,6 +15,26 @@
         "videos",
         "audios"
       ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "btnText": {
+      "type": "string",
+      "required": true
+    },
+    "btnHref": {
+      "type": "string",
+      "required": true
+    },
+    "exp": {
+      "type": "text",
+      "required": true
     }
   },
   "config": {}

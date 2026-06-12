@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "AV Fontimer";
+  src: url("/fonts/AV Fontimer.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --header-blue: #0d4e98;
   --text-light: #ffffff;
@@ -197,7 +205,7 @@ body {
   justify-content: center;
   height: 40px;
   padding: 0 18px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #f97316;
   color: #f97316;
   text-decoration: none;
@@ -212,6 +220,71 @@ body {
 }
 
 .heroSection {
-  min-height: 520px;
+  min-height: 570px;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 668px;
+  color: #fff;
+  margin-inline-start: 346px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.heroExp {
+  font-family: "Montserrat", sans-serif;
+  max-width: 302px;
+  max-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: rgb(255 255 255 / 75%);
+  border: 1px solid rgb(255 255 255 / 30%);
+  background: rgb(255 255 255 / 8%);
+}
+
+.heroTitle {
+  font-family: "AV Fontimer", sans-serif;
+  font-size: 50px;
+  font-style:normal;
+  line-height: 110%;    /* = 1.1 */
+  font-weight: 600;
+}
+
+.heroSubtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal; /* не Medium */
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.heroCtaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  background: rgba(255, 58, 0, 1);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 130%;
+  max-width: 241px;
+  letter-spacing: 0;
+}
+
+.heroCtaButton:hover {
+  background: #ea580c;
 }
