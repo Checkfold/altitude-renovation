@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_blocks_header_menus",
+  "info": {
+    "displayName": "header-menu"
+  },
+  "options": {},
+  "attributes": {
+    "main_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "commercial_baner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sharedMenuItem": {
+      "type": "component",
+      "component": "blocks.shared-menu-item",
+      "repeatable": true,
+      "required": true
+    },
+    "btnText": {
+      "type": "string",
+      "required": true
+    },
+    "btnHref": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

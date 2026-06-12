@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_shared_menu_items",
+  "info": {
+    "displayName": "sharedMenu-item"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
