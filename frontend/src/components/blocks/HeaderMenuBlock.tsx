@@ -5,6 +5,24 @@ type HeaderMenuBlockProps = {
   block: HeaderMenuBlockType;
 };
 
+function normalizeMenuHref(rawHref?: string): string {
+  const href = rawHref?.trim();
+  if (!href) return "/";
+
+  if (
+    href.startsWith("/") ||
+    href.startsWith("#") ||
+    href.startsWith("http://") ||
+    href.startsWith("https://") ||
+    href.startsWith("mailto:") ||
+    href.startsWith("tel:")
+  ) {
+    return href;
+  }
+
+  return `/${href}`;
+}
+
 function resolveMediaUrl(media: StrapiMediaField | undefined): string | null {
   if (!media) return null;
 
@@ -38,7 +56,7 @@ export default function HeaderMenuBlock({ block }: HeaderMenuBlockProps) {
     : null;
   const menuItems = block.sharedMenuItem ?? [];
   const ctaText = block.btnText?.trim() || block.cta_text?.trim() || "Оставить заявку";
-  const ctaHref = block.btnHref?.trim() || block.cta_href?.trim() || "#contact-form";
+  const ctaHref = block.btnHref?.trim() || block.cta_href?.trim() || "/request";
 
   return (
     <nav className="headerMenu">
@@ -92,7 +110,7 @@ export default function HeaderMenuBlock({ block }: HeaderMenuBlockProps) {
 
             return (
               <li key={item.id ?? `${item.label}-${index}`} className="headerMenuItem">
-                <Link href="/" className="headerMenuLink">
+                <Link href={normalizeMenuHref(item.href)} className="headerMenuLink">
                   {rawLabel}
                 </Link>
               </li>

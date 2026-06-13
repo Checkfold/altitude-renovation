@@ -1,5 +1,29 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksForm extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_forms';
+  info: {
+    displayName: 'form';
+  };
+  attributes: {
+    cityLabel: Schema.Attribute.Text & Schema.Attribute.Required;
+    emailLabel: Schema.Attribute.Text & Schema.Attribute.Required;
+    phoneLabel: Schema.Attribute.Text & Schema.Attribute.Required;
+    submitText: Schema.Attribute.Text & Schema.Attribute.Required;
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    successMessage: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksForma extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_forma';
+  info: {
+    displayName: '\u0444\u043E\u0440\u043C\u0430';
+  };
+  attributes: {};
+}
+
 export interface BlocksGuarantees extends Struct.ComponentSchema {
   collectionName: 'components_blocks_guarantees';
   info: {
@@ -88,6 +112,22 @@ export interface BlocksHero extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksRequestForm extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_request_forms';
+  info: {
+    displayName: 'request-form';
+  };
+  attributes: {
+    cityLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    emailLabel: Schema.Attribute.Text & Schema.Attribute.Required;
+    phoneLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    submitText: Schema.Attribute.String & Schema.Attribute.Required;
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    successMessage: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksSharedMenuItem extends Struct.ComponentSchema {
   collectionName: 'components_blocks_shared_menu_items';
   info: {
@@ -102,10 +142,13 @@ export interface BlocksSharedMenuItem extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.form': BlocksForm;
+      'blocks.forma': BlocksForma;
       'blocks.guarantees': BlocksGuarantees;
       'blocks.header': BlocksHeader;
       'blocks.header-menu': BlocksHeaderMenu;
       'blocks.hero': BlocksHero;
+      'blocks.request-form': BlocksRequestForm;
       'blocks.shared-menu-item': BlocksSharedMenuItem;
     }
   }

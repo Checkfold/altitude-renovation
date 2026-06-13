@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_pages",
+  "info": {
+    "singularName": "form-page",
+    "pluralName": "form-pages",
+    "displayName": "form-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "form": {
+      "type": "component",
+      "component": "blocks.form",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

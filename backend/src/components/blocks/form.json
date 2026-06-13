@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_blocks_forms",
+  "info": {
+    "displayName": "form"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "emailLabel": {
+      "type": "text",
+      "required": true
+    },
+    "phoneLabel": {
+      "type": "text",
+      "required": true
+    },
+    "cityLabel": {
+      "type": "text",
+      "required": true
+    },
+    "submitText": {
+      "type": "text",
+      "required": true
+    },
+    "successMessage": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

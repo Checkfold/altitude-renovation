@@ -66,7 +66,7 @@ body {
 .socialLinks {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin-left: auto;
   padding-left: 16px;
   position: relative;
@@ -247,7 +247,6 @@ body {
   font-weight: 400;
   line-height: 140%;
   color: rgb(255 255 255 / 75%);
-  border: 1px solid rgb(255 255 255 / 30%);
   background: rgb(255 255 255 / 8%);
 }
 
@@ -287,4 +286,79 @@ body {
 
 .heroCtaButton:hover {
   background: #ea580c;
+}
+
+.requestSection {
+  padding: 64px 0;
+}
+
+.requestContainer {
+  max-width: 640px;
+}
+
+.requestTitle {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.requestSubtitle {
+  color: #4b5563;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.requestForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.requestLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.requestInput {
+  height: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
+.requestInput:focus {
+  outline: none;
+  border-color: #0d4e98;
+  box-shadow: 0 0 0 3px rgb(13 78 152 / 15%);
+}
+
+.requestSubmit {
+  border: 0;
+  border-radius: 8px;
+  min-height: 46px;
+  padding: 0 18px;
+  background: #f97316;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.requestSubmit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.requestSuccess {
+  color: #047857;
+}
+
+.requestError {
+  color: #b91c1c;
 }

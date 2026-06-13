@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "request_pages",
+  "info": {
+    "singularName": "request-page",
+    "pluralName": "request-pages",
+    "displayName": "request-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "form": {
+      "type": "component",
+      "component": "blocks.form",
+      "repeatable": false
+    }
+  }
+}

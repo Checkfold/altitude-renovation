@@ -4,6 +4,35 @@ export type StrapiTextNode = {
   children?: StrapiTextNode[];
 };
 
+export type RequestFormBlock = {
+  __component: "blocks.request-form";
+  title?: string;
+  subtitle?: string;
+  emailLabel?: string;
+  phoneLabel?: string;
+  cityLabel?: string;
+  submitText?: string;
+  successMessage?: string;
+};
+
+export type RequestPageResponse = {
+  data?: RequestPageEntity;
+};
+
+export type RequestPageEntity = {
+  id?: number;
+  slug?: string;
+  form?: RequestFormBlock;
+  attributes?: {
+    slug?: string;
+    form?: RequestFormBlock;
+  };
+};
+
+export type RequestPageListResponse = {
+  data?: RequestPageEntity[];
+};
+
 export type MenuItem = {
   id?: number;
   label?: string;

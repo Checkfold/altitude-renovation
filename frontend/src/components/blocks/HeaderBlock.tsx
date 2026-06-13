@@ -35,11 +35,9 @@ function resolveMediaUrl(media: StrapiMediaField | undefined): string | null {
   return null;
 }
 
-/* eslint-disable @next/next/no-img-element */
+
 function HeaderIcon({ src, size = 16, withRightGap = true }: IconProps) {
   if (!src) return null;
-
-  // Для маленьких CMS-иконок в хедере обычный img стабильнее, чем next/image.
   return (
     <img
       src={src}
@@ -55,7 +53,6 @@ function HeaderIcon({ src, size = 16, withRightGap = true }: IconProps) {
     />
   );
 }
-/* eslint-enable @next/next/no-img-element */
 
 export default function HeaderBlock({ block }: HeaderBlockProps) {
   const phonePrimary =
@@ -125,7 +122,7 @@ export default function HeaderBlock({ block }: HeaderBlockProps) {
             rel="noopener noreferrer"
             aria-label="VK"
           >
-            <HeaderIcon src={vkIconUrl} size={20} withRightGap={false} />
+            <HeaderIcon src={vkIconUrl} size={30} withRightGap={false} />
           </a>
           <a
             href={telegramLink}
@@ -134,7 +131,7 @@ export default function HeaderBlock({ block }: HeaderBlockProps) {
             rel="noopener noreferrer"
             aria-label="Telegram"
           >
-            <HeaderIcon src={telegramIconUrl} size={20} withRightGap={false} />
+            <HeaderIcon src={telegramIconUrl} size={30} withRightGap={false} />
           </a>
         </div>
       </div>
